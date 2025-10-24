@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Télécharger Zelda Minish Cap</title>
+</head>
+<body>
+    <h1>Télécharger The Legend of Zelda: The Minish Cap</h1>
+    <button id="downloadBtn">Télécharger la ROM</button>
+
+    <script>
+        const downloadUrl = "https://raw.githubusercontent.com/HautotQ/Database_General/main/1758%20-%20The%20Legend%20of%20Zelda%20-%20The%20Minish%20Cap%20(E)(Independent).gba";
+
+        document.getElementById("downloadBtn").addEventListener("click", () => {
+            const a = document.createElement("a");
+            a.href = downloadUrl;
+            a.download = "Zelda_Minish_Cap.gba"; // Nom du fichier à télécharger
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+        });
+    </script>
+</body>
+</html>
